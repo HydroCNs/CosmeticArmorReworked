@@ -3,6 +3,7 @@ package lain.mods.cos.client;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.renderer.OpenGlHelper;
+import net.minecraft.client.resources.I18n;
 
 import org.lwjgl.opengl.GL11;
 
@@ -23,14 +24,21 @@ public class GuiCosArmorToggleButton extends GuiButton {
             this.field_146123_n = x >= this.xPosition && y >= this.yPosition
                 && x < this.xPosition + this.width
                 && y < this.yPosition + this.height;
+            int hoverstate = this.getHoverState(this.field_146123_n);
             GL11.glEnable(GL11.GL_BLEND);
             OpenGlHelper.glBlendFunc(770, 771, 1, 0);
             GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 
-            this.drawTexturedModalRect(this.xPosition, this.yPosition, 0 + 5 * state, 176, 5, 5);
+            this.drawTexturedModalRect(this.xPosition, this.yPosition, 5 * (1 - state), 176, 5, 5);
 
-            this.mouseDragged(mc, x, y);
+            if (hoverstate == 2) this.drawCenteredString(
+                mc.fontRenderer,
+                I18n.format(state == 0 ? "cos.gui.buttonToggleOff" : "cos.gui.buttonToggleOn"),
+                this.xPosition + 5,
+                this.yPosition + this.height,
+                0xffffff);
         }
-    }
 
+        this.mouseDragged(mc, x, y);
+    }
 }
