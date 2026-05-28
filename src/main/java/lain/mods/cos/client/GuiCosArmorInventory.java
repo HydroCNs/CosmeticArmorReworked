@@ -110,7 +110,7 @@ public class GuiCosArmorInventory extends InventoryEffectRenderer {
     @Override
     protected void drawGuiContainerForegroundLayer(int p_drawGuiContainerForegroundLayer_1_,
         int p_drawGuiContainerForegroundLayer_2_) {
-        fontRendererObj.drawString(I18n.format("container.crafting", new Object[0]), 106, 16, 4210752);
+        fontRendererObj.drawString(I18n.format("container.crafting", new Object[0]), 106+4, 16, 4210752);
     }
 
     @Override

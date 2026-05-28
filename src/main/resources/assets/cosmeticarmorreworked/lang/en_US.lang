@@ -1,5 +1,5 @@
 cos.key.openCosArmorInventory=Open Cosmetic Armor Inventory
 cos.gui.buttonCos=Cosmetic Armor
 cos.gui.buttonNormal=Normal
-cos.gui.buttonToggleOn=Enable
-cos.gui.buttonToggleOff=Disable
+cos.gui.buttonToggleOn=On
+cos.gui.buttonToggleOff=Off
