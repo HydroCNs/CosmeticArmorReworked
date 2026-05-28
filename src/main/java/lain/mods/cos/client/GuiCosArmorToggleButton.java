@@ -34,7 +34,7 @@ public class GuiCosArmorToggleButton extends GuiButton {
             if (hoverstate == 2) this.drawCenteredString(
                 mc.fontRenderer,
                 I18n.format(state == 0 ? "cos.gui.buttonToggleOff" : "cos.gui.buttonToggleOn"),
-                this.xPosition + 5,
+                this.xPosition + 15,
                 this.yPosition + this.height,
                 0xffffff);
         }
